@@ -1,0 +1,71 @@
+@font-face{font-family:"Righteous";src:url(/fonts/righteous-latin-400-normal.woff2) format("woff2");font-display:block}
+@font-face{font-family:"Raleway";font-weight:900;src:url(/fonts/raleway-latin-900-normal.woff2) format("woff2");font-display:block}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:normal;src:url(/fonts/gelasio-latin-400-normal.woff2) format("woff2");font-display:block}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:italic;src:url(/fonts/gelasio-latin-400-italic.woff2) format("woff2");font-display:block}
+@font-face{font-family:"Gelasio";font-weight:700;font-style:normal;src:url(/fonts/gelasio-latin-700-normal.woff2) format("woff2");font-display:block}
+@font-face{font-family:"Gelasio";font-weight:700;font-style:italic;src:url(/fonts/gelasio-latin-700-italic.woff2) format("woff2");font-display:block}
+
+:root{
+  --cream:#faf6ee; --green:#80af60; --pink:#e87a96; --ink:#231f20; --ink-soft:#3b3537;
+    --head:"Righteous",sans-serif;
+  --serif:"Gelasio",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:100%;height:100%;overflow:hidden;background:#000;cursor:none}
+
+/* Everything is designed on a fixed 1920x1080 stage and scaled to fit any TV. */
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;background:var(--cream);overflow:hidden}
+
+.slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;background:var(--cream);color:var(--ink);overflow:hidden}
+.slide.on{opacity:1}
+
+/* ---------- shared footer ---------- */
+.foot{position:absolute;left:0;right:0;bottom:0;height:92px;background:var(--green);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+.foot b{font-family:var(--head);font-weight:400;font-size:34px;letter-spacing:.02em;color:var(--ink)}
+.foot small{font-family:var(--head);font-size:15px;color:var(--ink);opacity:.85}
+
+/* ---------- list slides ---------- */
+.list .head{position:absolute;left:70px;right:70px;top:34px;height:130px;display:flex;align-items:center;gap:48px}
+.list .head img{height:100px;width:auto}
+.list .head .t{flex:1;min-width:0}
+.list .head h1{font-family:var(--head);font-weight:400;font-size:88px;line-height:1;letter-spacing:.01em}
+.list .head .note{font-family:var(--serif);font-style:italic;font-weight:700;font-size:34px;margin-top:6px;color:var(--ink-soft)}
+.list .head .tag{font-family:var(--serif);font-size:38px;line-height:1.15;text-align:right;color:var(--ink-soft)}
+.list .head .tag em{font-weight:700}
+.list .body{position:absolute;left:70px;right:70px;top:190px;bottom:112px}
+.list .body.cols1{column-count:2;column-gap:80px}
+.list .body.cols2{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.item{break-inside:avoid;margin-bottom:26px}
+.item .row{display:flex;align-items:center;gap:18px}
+.item .name{font-family:var(--head);font-size:42px;line-height:1.1}
+.item .price{margin-left:auto;font-family:var(--head);font-size:38px;line-height:1;background:var(--green);color:var(--ink);padding:9px 20px 7px;border-radius:999px;white-space:nowrap}
+.item .desc{font-family:var(--serif);font-size:29px;line-height:1.28;color:var(--ink-soft);margin-top:6px;max-width:94%}
+.badge{font-family:var(--head);font-size:21px;line-height:1;letter-spacing:.03em;background:var(--pink);color:#fff;padding:8px 16px 6px;border-radius:6px;white-space:nowrap;text-transform:uppercase}
+.block h2{font-family:var(--head);font-weight:400;font-size:70px;line-height:1;margin-bottom:4px}
+.block .note{font-family:var(--serif);font-style:italic;font-weight:700;font-size:30px;margin-bottom:22px;color:var(--ink-soft)}
+.cols2 .item{margin-bottom:34px}
+.cols2 .item .desc{font-size:31px}
+
+/* ---------- patterned slides (logo, rewards) ---------- */
+.pattern{background:var(--cream) url(/img/pattern.svg) center/cover no-repeat}
+
+.logoslide img{position:absolute;left:50%;top:50%;width:710px;height:auto;transform:translate(-50%,-50%)}
+
+.rewards .t1{position:absolute;left:0;right:0;top:166px;text-align:center;font-family:var(--head);font-size:104px;line-height:132px;color:var(--ink)}
+.rewards .mark{position:absolute;left:50%;top:296px;width:570px;height:auto;transform:translateX(-50%)}
+.rewards .row{position:absolute;left:0;right:0;top:560px;height:356px;display:flex;align-items:center;justify-content:center;gap:78px}
+.rewards .copy{width:893px;text-align:right;font-family:var(--serif);font-size:84px;line-height:1.12;color:var(--ink);white-space:nowrap}
+.rewards .copy em{font-weight:700;font-style:italic;font-size:1.18em}
+.rewards .partner{width:674px;text-align:left}
+.rewards .partner svg{display:block;width:100%;height:84px;margin-bottom:6px}
+.rewards .partner .n1,.rewards .partner .n2{font-family:"Raleway",var(--head);font-weight:900;font-size:92px;line-height:1.04;color:#2b1618;white-space:nowrap}
+.rewards .partner .n2{letter-spacing:.41em;margin-right:-.41em}
+.rewards .partner img{display:block;width:100%;height:auto}
+
+/* ---------- full-bleed photo with a name label ---------- */
+.photo{background:#000 center/cover no-repeat}
+.photo .label{position:absolute;right:0;bottom:0;background:var(--green);color:var(--cream);font-family:var(--head);font-size:56px;line-height:1;padding:24px 56px 20px 64px;border-top-left-radius:28px}
+
+/* two-column slides: long price + badge wrap the badge under the name instead of squeezing the title */
+.cols2 .item .row{flex-wrap:wrap;row-gap:10px}
+.cols2 .item .badge{order:3}

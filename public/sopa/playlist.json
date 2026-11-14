@@ -1,0 +1,146 @@
+{
+  "timezone": "America/Denver",
+  "defaultDuration": 12,
+  "footer": {
+    "line": "ORDER AT THE KIOSK  •  AT THE COUNTER  •  OR ONLINE: WWW.GRABSOPA.COM",
+    "legal": "Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk of foodborne illness."
+  },
+  "screens": {
+    "default": [
+      "logo",
+      "savory",
+      "photo-chicken-salad",
+      "sweet-sides",
+      "photo-chimayo",
+      "rewards"
+    ]
+  },
+  "slides": {
+    "logo": {
+      "type": "logo",
+      "duration": 8
+    },
+    "savory": {
+      "type": "list",
+      "duration": 28,
+      "blocks": [
+        {
+          "heading": "SAVORY DUOS",
+          "note": "Two Stuffed SOPAs per order.",
+          "items": [
+            {
+              "name": "Garden SOPAs",
+              "price": "$12",
+              "desc": "Jalapeño lime cream cheese, chives, cucumber, spinach, red onion, sliced carrots, and sliced bell peppers, topped with avocado ranch."
+            },
+            {
+              "name": "Green Chile Enchilada SOPAs",
+              "price": "$13",
+              "desc": "Slow-roasted chicken and Monterey Jack in New Mexico green chile sauce, topped with green onion, black olives, Monterey Jack, and sour cream."
+            },
+            {
+              "name": "Stuffed Club SOPAs",
+              "price": "$14",
+              "desc": "Ham, turkey, bacon, pepper jack, cheddar, seasoned tomato, and grilled green chile, topped with chopped leaf lettuce, sliced avocado and red onion."
+            },
+            {
+              "name": "Chicken Salad SOPAs",
+              "price": "$13",
+              "badge": "SOPA! fan favorite",
+              "desc": "Diced chicken breast, mayo, grapes, dried cranberries, red onion, and fresh greens, topped with diced tomato."
+            },
+            {
+              "name": "Taco SOPAs",
+              "price": "$13",
+              "desc": "Seasoned ground beef or chicken, and beans with cheese, shredded lettuce, tomato, and onion."
+            },
+            {
+              "name": "Chimayo SOPAs",
+              "price": "$14",
+              "desc": "Slow-roasted carne adovada, Chimayo red chile, and papitas, topped with shredded greens, green onion, avocado crema, and Monterey Jack."
+            },
+            {
+              "name": "Relleno SOPAs",
+              "price": "$15",
+              "badge": "SOPA! fan favorite",
+              "desc": "Chopped relleno, Monterey Jack, lettuce mix, and sliced avocado, topped with red chile lime cream."
+            },
+            {
+              "name": "BBQ SOPAs",
+              "price": "$15",
+              "desc": "Pork carnitas in Flatiron BBQ sauce with sliced red onion, cheddar, and apple slaw."
+            }
+          ]
+        }
+      ]
+    },
+    "photo-chicken-salad": {
+      "type": "photo",
+      "duration": 8,
+      "image": "/img/chicken-salad.jpg",
+      "label": "chicken salad SOPAs"
+    },
+    "sweet-sides": {
+      "type": "list",
+      "duration": 24,
+      "tagline": "YOUR destination for<br><em>fresh stuffed sopapillas.</em>",
+      "blocks": [
+        {
+          "heading": "SWEET SINGLES",
+          "note": "One Stuffed SOPA per order.",
+          "items": [
+            {
+              "name": "Pink Cloud SOPA",
+              "price": "$8",
+              "desc": "Silky lemon cream, mixed berries, sugar, whipped cream, and lemon zest."
+            },
+            {
+              "name": "Apple Pie SOPA",
+              "price": "$8",
+              "desc": "Apples and butter with ice cream, rum sauce, and cinnamon sugar."
+            },
+            {
+              "name": "Churro Bomb SOPA",
+              "price": "$8",
+              "desc": "Vanilla bean ice cream, banana, and chopped churros with chocolate syrup, cinnamon sugar, caramel, and a dark chocolate mix."
+            }
+          ]
+        },
+        {
+          "heading": "SIDES & MORE",
+          "items": [
+            {
+              "name": "Classic SOPAs",
+              "price": "$1.50 each / $5 for six",
+              "desc": "Plain SOPAs served with 100% honey packets."
+            },
+            {
+              "name": "Green Chile Stew",
+              "price": "$4 side / $10 pint",
+              "badge": "SOPA! fan favorite",
+              "desc": "Homestyle family-recipe green chile stew made perfect by itself or to dip."
+            },
+            {
+              "name": "Apple Slaw",
+              "price": "$4 side",
+              "desc": "Fan-favorite cinnamon apple coleslaw made fresh."
+            }
+          ]
+        }
+      ]
+    },
+    "photo-chimayo": {
+      "type": "photo",
+      "duration": 8,
+      "image": "/img/chimayo.jpg",
+      "label": "chimayo SOPAs"
+    },
+    "rewards": {
+      "type": "rewards",
+      "duration": 10,
+      "title": "thanks for visiting",
+      "copy": "every order counts<br>toward <em>free food</em> with:",
+      "partnerLogo": "/img/primera-agua-rewards.png"
+    }
+  }
+}
